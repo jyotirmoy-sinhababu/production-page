@@ -14,13 +14,12 @@ const useFetchProfilePic = () => {
     const getData = async () => {
       setIsLoading(true);
       try {
-        debugger;
-        const allImg = [];
+        // const allImg = [];
         const querySnapshot = await getDocs(collection(firestore, 'users'));
         querySnapshot.forEach((doc) => {
-          allImg.push({ ...doc.data() });
+          setImgData({ ...doc.data() });
         });
-        setImgData(allImg);
+        // setImgData(allImg);
       } catch (error) {
         showToast('error');
       } finally {
