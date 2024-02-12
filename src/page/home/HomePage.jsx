@@ -1,11 +1,11 @@
-import useFetchProfilePic from '../../hooks/useFetchProfilePic';
+import ProfileHeader from '../../components/profile/ProfileHeader';
 
 const HomePage = () => {
-  const { isLoading, ImgData } = useFetchProfilePic();
-
-  console.log(ImgData?.userName);
-
-  return <>drtfyguhiophbjnkml</>;
+  return (
+    <>
+      <ProfileHeader />
+    </>
+  );
 };
 
 export default HomePage;
