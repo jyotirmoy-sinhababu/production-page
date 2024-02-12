@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 // import { useSelector, useDispatch } from 'react-redux';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { firestore } from '../firebase/Firebase';
+import useShowToast from './useShowToast';
 
 const useFetchProfilePic = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [ImgData, setImgData] = useState();
   // const posts = useSelector((state) => state.post.posts);
   // const authUser = useSelector((state) => state.auth.user);
-  // const showToast = useShowToast();
+  const showToast = useShowToast();
   // const dispatch = useDispatch();
   useEffect(() => {
     const getData = async () => {
@@ -21,7 +22,7 @@ const useFetchProfilePic = () => {
         });
         // setImgData(allImg);
       } catch (error) {
-        showToast('error');
+        showToast('Error', error.message, 'error');
       } finally {
         setIsLoading(false);
       }
