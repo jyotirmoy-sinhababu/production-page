@@ -1,9 +1,9 @@
-import ProfileHeader from '../../components/profile/ProfileHeader';
+import ProfilePage from '../profilePage/ProfilePage';
 
 const HomePage = () => {
   return (
     <>
-      <ProfileHeader />
+      <ProfilePage />
     </>
   );
 };
