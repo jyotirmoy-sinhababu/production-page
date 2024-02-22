@@ -3,8 +3,12 @@ import { Flex, Box, Text, Button, Divider } from '@chakra-ui/react';
 const Navbar = () => {
   return (
     <>
-      {' '}
-      <Flex alignItems={'center'} justifyContent={'space-between'} h={'65px'}>
+      <Flex
+        alignItems={'center'}
+        justifyContent={'space-between'}
+        h={'65px'}
+        mx={'2%'}
+      >
         <Box pl={'12px'}>
           <Text fontSize={{ base: '3xl', sm: 'xl' }}>Rick's Photography</Text>
         </Box>

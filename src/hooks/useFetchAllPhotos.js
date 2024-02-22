@@ -12,12 +12,12 @@ const useFetchAllPhotos = () => {
     const getData = async () => {
       setIsLoading(true);
       try {
-        // const allImg = [];
+        const allImg = [];
         const querySnapshot = await getDocs(collection(firestore, 'posts'));
         querySnapshot.forEach((doc) => {
-          setAllData({ ...doc.data() });
+          allImg.push({ ...doc.data(), id: doc.id });
         });
-        // setImgData(allImg);
+        setAllData(allImg);
       } catch (error) {
         showToast('Error', error.message, 'error');
       } finally {
