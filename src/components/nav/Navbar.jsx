@@ -6,7 +6,7 @@ const Navbar = () => {
       {' '}
       <Flex alignItems={'center'} justifyContent={'space-between'} h={'65px'}>
         <Box pl={'12px'}>
-          <Text fontSize={{ base: '3xl', sm: '2xl' }}>Rick's Photography</Text>
+          <Text fontSize={{ base: '3xl', sm: 'xl' }}>Rick's Photography</Text>
         </Box>
         <Flex alignItems={'center'} justifyContent={'space-around'} w={'298px'}>
           <Button>About me</Button>
