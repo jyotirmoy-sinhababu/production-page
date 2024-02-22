@@ -9,9 +9,12 @@ const ProfilePage = () => {
   return (
     <>
       <ProfileHeader />
-      {allData?.map((data) => {
-        return <ProfileBody data={data} />;
-      })}
+      <div style={{ marginTop: '124px' }}>
+        {' '}
+        {allData?.map((data) => {
+          return <ProfileBody data={data} />;
+        })}
+      </div>
     </>
   );
 };

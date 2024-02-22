@@ -25,7 +25,7 @@ const ProfileHeader = () => {
           </VStack>
         ))}
       {!isLoading && (
-        <Flex pt={'29px'} flexDir={{ base: 'column', md: 'row' }} gap={'7%'}>
+        <Flex pt={'95px'} flexDir={{ base: 'column', md: 'row' }} gap={'7%'}>
           <AvatarGroup
             size={{ base: 'xl', md: '2xl' }}
             justifySelf={'center'}
