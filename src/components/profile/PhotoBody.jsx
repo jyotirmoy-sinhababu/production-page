@@ -7,11 +7,10 @@ import {
   ModalCloseButton,
   ModalContent,
   ModalOverlay,
-  Text,
   useDisclosure,
 } from '@chakra-ui/react';
 
-const ProfileBody = ({ data }) => {
+const PhotoBody = ({ data }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   console.log(data);
   return (
@@ -47,6 +46,7 @@ const ProfileBody = ({ data }) => {
           w={'100%'}
           h={'100%'}
           objectFit={'cover'}
+          rounded={'15px'}
         />
       </GridItem>
       <Modal
@@ -85,4 +85,4 @@ const ProfileBody = ({ data }) => {
   );
 };
 
-export default ProfileBody;
+export default PhotoBody;

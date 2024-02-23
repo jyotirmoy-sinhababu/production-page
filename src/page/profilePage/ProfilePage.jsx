@@ -1,19 +1,25 @@
 import ProfileHeader from '../../components/profile/ProfileHeader';
-import ProfileBody from '../../components/profile/ProfileBody';
 
-import useFetchAllPhotos from '../../hooks/useFetchAllPhotos';
+import { Flex } from '@chakra-ui/react';
+
+import PhotoGallery from '../../components/profile/PhotoGallery';
 
 const ProfilePage = () => {
-  const { isLoading, allData } = useFetchAllPhotos();
-  console.log(allData);
   return (
     <>
       <ProfileHeader />
       <div style={{ marginTop: '124px' }}>
         {' '}
-        {allData?.map((data) => {
-          return <ProfileBody data={data} />;
-        })}
+        <Flex
+          px={{ base: 2, sm: 4 }}
+          maxW={'full'}
+          mx={'auto'}
+          borderTop={'1px solid'}
+          borderColor={'whiteAlpha.300'}
+          direction={'column'}
+        >
+          <PhotoGallery />
+        </Flex>
       </div>
     </>
   );
