@@ -10,9 +10,18 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 
+// import Lightbox from 'yet-another-react-lightbox';
+// import 'yet-another-react-lightbox/styles.css';
+
+import { useState } from 'react';
+
 const PhotoBody = ({ data }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   console.log(data);
+
+  // const [open, setOpen] = useState(false);
+  // const [index, setIndex] = useState(-1);
+
   return (
     <>
       {' '}
@@ -58,7 +67,7 @@ const PhotoBody = ({ data }) => {
         <ModalOverlay />
         <ModalContent>
           <ModalCloseButton />
-          <ModalBody bg={'black'} pb={5}>
+          <ModalBody bg={'gray.800'} pb={5}>
             <Flex
               gap='4'
               w={{ base: '90%', sm: '70%', md: 'full' }}
@@ -81,6 +90,12 @@ const PhotoBody = ({ data }) => {
           </ModalBody>
         </ModalContent>
       </Modal>
+      {/* <Lightbox
+        open={open}
+        index={index}
+        close={() => setOpen(false)}
+        slides={data?.imageURl}
+      /> */}
     </>
   );
 };

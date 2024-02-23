@@ -12,7 +12,6 @@ import useFetchProfilePic from '../../hooks/useFetchProfilePic';
 
 const ProfileHeader = () => {
   const { isLoading, ImgData } = useFetchProfilePic();
-  // console.log(ImgData);
 
   return (
     <>
@@ -27,12 +26,16 @@ const ProfileHeader = () => {
       {!isLoading && (
         <Flex pt={'95px'} flexDir={{ base: 'column', md: 'row' }} gap={'7%'}>
           <AvatarGroup
-            size={{ base: 'xl', md: '2xl' }}
+            size={{ base: 'xl', md: 'xl' }}
             justifySelf={'center'}
             alignSelf={'flex-start'}
             mx={'auto'}
           >
-            <Avatar w={'411px'} h={'350px'} src={ImgData?.profilePicURL} />
+            <Avatar
+              w={{ base: '200px', sm: '400px' }}
+              h={{ base: '200px', sm: '400px' }}
+              src={ImgData?.profilePicURL}
+            />
           </AvatarGroup>
           <Box
             display={'flex'}
