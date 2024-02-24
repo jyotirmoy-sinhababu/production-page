@@ -8,7 +8,7 @@ const Navbar = () => {
       <Flex
         alignItems={'center'}
         justifyContent={'space-between'}
-        h={'65px'}
+        h={'135px'}
         mx={'2%'}
       >
         <Flex pl={'12px'}>
@@ -20,7 +20,7 @@ const Navbar = () => {
           </Button>
         </Flex>
       </Flex>
-      <Divider my={2} bg={'gray.8000'} />
+      <Divider my={2} bg={'gray.10000'} />
     </>
   );
 };

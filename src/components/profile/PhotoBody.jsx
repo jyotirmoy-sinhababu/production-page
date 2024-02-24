@@ -12,15 +12,20 @@ import {
 
 // import Lightbox from 'yet-another-react-lightbox';
 // import 'yet-another-react-lightbox/styles.css';
+// import Inline from 'yet-another-react-lightbox/plugins/inline';
 
-import { useState } from 'react';
+// import { useState } from 'react';
 
 const PhotoBody = ({ data }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  console.log(data);
+  // console.log(data);
 
   // const [open, setOpen] = useState(false);
   // const [index, setIndex] = useState(-1);
+
+  // const toggleOpen = (state) => () => setOpen(state);
+
+  // const updateIndex = ({ index: current }) => setIndex(current);
 
   return (
     <>
@@ -37,7 +42,7 @@ const PhotoBody = ({ data }) => {
       >
         <Flex
           opacity={0}
-          _hover={{ opacity: 1 }}
+          _hover={{ opacity: 0.1 }}
           position={'absolute'}
           top={0}
           left={0}
@@ -91,10 +96,35 @@ const PhotoBody = ({ data }) => {
         </ModalContent>
       </Modal>
       {/* <Lightbox
-        open={open}
         index={index}
-        close={() => setOpen(false)}
-        slides={data?.imageURl}
+        slides={data?.imageURL}
+        plugins={[Inline]}
+        on={{
+          view: updateIndex,
+          click: toggleOpen(true),
+        }}
+        carousel={{
+          padding: 0,
+          spacing: 0,
+          imageFit: 'cover',
+        }}
+        inline={{
+          style: {
+            width: '100%',
+            maxWidth: '900px',
+            aspectRatio: '3 / 2',
+            margin: '0 auto',
+          },
+        }}
+      />
+      <Lightbox
+        open={open}
+        close={toggleOpen(false)}
+        index={index}
+        slides={data?.imageURL}
+        on={{ view: updateIndex }}
+        animation={{ fade: 0 }}
+        controller={{ closeOnPullDown: true, closeOnBackdropClick: true }}
       /> */}
     </>
   );

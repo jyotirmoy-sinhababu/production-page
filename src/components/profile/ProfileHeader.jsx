@@ -24,7 +24,11 @@ const ProfileHeader = () => {
           </VStack>
         ))}
       {!isLoading && (
-        <Flex pt={'95px'} flexDir={{ base: 'column', md: 'row' }} gap={'7%'}>
+        <Flex
+          pt={{ base: '41px', md: '96px' }}
+          flexDir={{ base: 'column', md: 'row' }}
+          gap={{ base: '3%', md: '7%' }}
+        >
           <AvatarGroup
             size={{ base: 'xl', md: 'xl' }}
             justifySelf={'center'}
@@ -32,8 +36,8 @@ const ProfileHeader = () => {
             mx={'auto'}
           >
             <Avatar
-              w={{ base: '200px', sm: '400px' }}
-              h={{ base: '200px', sm: '400px' }}
+              w={{ base: '200px', md: '400px' }}
+              h={{ base: '200px', md: '400px' }}
               src={ImgData?.profilePicURL}
             />
           </AvatarGroup>
@@ -43,8 +47,10 @@ const ProfileHeader = () => {
             justifyContent={'center'}
             mx={'auto'}
           >
-            <Text fontSize='3xl'>Hi I am {ImgData?.fullName}</Text>
-            <Text fontSize='6xl'>{ImgData?.bio}</Text>
+            <Text fontSize={{ base: 'xl', md: '3xl' }}>
+              Hi I am {ImgData?.fullName}
+            </Text>
+            <Text fontSize={{ base: '2xl', md: '6xl' }}>{ImgData?.bio}</Text>
           </Box>
         </Flex>
       )}
