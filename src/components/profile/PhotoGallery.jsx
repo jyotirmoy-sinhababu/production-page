@@ -31,9 +31,9 @@ const PhotoGallery = () => {
       {!isLoading && allData.length > 0 ? (
         <>
           {allData?.map((data, index) => (
-            <Grid key={index}>
+            <Flex key={index} flexWrap={'wrap'} m={'4px'}>
               <PhotoBody data={data} />
-            </Grid>
+            </Flex>
           ))}
         </>
       ) : null}

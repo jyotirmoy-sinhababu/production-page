@@ -30,7 +30,7 @@ const PhotoBody = ({ data }) => {
   return (
     <>
       {' '}
-      <GridItem
+      <Flex
         cursor={'pointer'}
         borderRadius={4}
         overflow={'hidden'}
@@ -42,7 +42,7 @@ const PhotoBody = ({ data }) => {
       >
         <Flex
           opacity={0}
-          _hover={{ opacity: 0.1 }}
+          _hover={{ opacity: 0.5 }}
           position={'absolute'}
           top={0}
           left={0}
@@ -52,17 +52,19 @@ const PhotoBody = ({ data }) => {
           transition={'all 0.3s ease'}
           zIndex={1}
           justifyContent={'center'}
-        ></Flex>
+        >
+          {data?.caption}
+        </Flex>
 
         <Image
           src={data?.imageURL}
           alt='profile post'
           w={'100%'}
           h={'100%'}
-          objectFit={'cover'}
           rounded={'15px'}
+          fit={'cover'}
         />
-      </GridItem>
+      </Flex>
       <Modal
         isOpen={isOpen}
         onClose={onClose}
@@ -71,14 +73,14 @@ const PhotoBody = ({ data }) => {
       >
         <ModalOverlay />
         <ModalContent>
-          <ModalCloseButton />
+          <ModalCloseButton color={'white'} />
           <ModalBody bg={'gray.800'} pb={5}>
             <Flex
               gap='4'
               w={{ base: '90%', sm: '70%', md: 'full' }}
               mx={'auto'}
-              maxH={'90vh'}
-              minH={'50vh'}
+              maxH={'fitContent'}
+              minH={'fitContent'}
             >
               <Flex
                 borderRadius={4}
@@ -89,7 +91,15 @@ const PhotoBody = ({ data }) => {
                 justifyContent={'center'}
                 alignItems={'center'}
               >
-                {<Image src={data?.imageURL} alt='profile post' />}
+                {
+                  <Image
+                    src={data?.imageURL}
+                    alt='profile post'
+                    fit={'contain'}
+                    w={'100%'}
+                    h={'100%'}
+                  />
+                }
               </Flex>
             </Flex>
           </ModalBody>
