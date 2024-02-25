@@ -10,6 +10,8 @@ import {
 
 import useFetchProfilePic from '../../hooks/useFetchProfilePic';
 
+import FloatingIsland from '../floatingIsland/FloatingIsland';
+
 const ProfileHeader = () => {
   const { isLoading, ImgData } = useFetchProfilePic();
 
@@ -27,7 +29,7 @@ const ProfileHeader = () => {
         <Flex
           pt={{ base: '41px', md: '96px' }}
           flexDir={{ base: 'column', md: 'row' }}
-          gap={{ base: '3%', md: '7%' }}
+          gap={{ base: '4%', md: '7%' }}
         >
           <AvatarGroup
             size={{ base: 'xl', md: 'xl' }}
@@ -51,6 +53,7 @@ const ProfileHeader = () => {
               Hi I am {ImgData?.fullName}
             </Text>
             <Text fontSize={{ base: '2xl', md: '6xl' }}>{ImgData?.bio}</Text>
+            <FloatingIsland />
           </Box>
         </Flex>
       )}
