@@ -15,7 +15,7 @@ const Navbar = () => {
           <Text fontSize={{ base: '3xl', sm: 'xl' }}>Rick's Photography</Text>
         </Flex>
         <Flex alignItems={'center'} w={'48px'}>
-          <Button>
+          <Button background={'transparent'} fontSize={'41px'}>
             <FaBurger />
           </Button>
         </Flex>

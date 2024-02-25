@@ -38,8 +38,8 @@ const ProfileHeader = () => {
             mx={'auto'}
           >
             <Avatar
-              w={{ base: '200px', md: '400px' }}
-              h={{ base: '200px', md: '400px' }}
+              w={{ base: '210px', md: '400px' }}
+              h={{ base: '210px', md: '400px' }}
               src={ImgData?.profilePicURL}
             />
           </AvatarGroup>
@@ -48,6 +48,7 @@ const ProfileHeader = () => {
             flexDir={'column'}
             justifyContent={'center'}
             mx={'auto'}
+            gap={{ base: '2%', md: '3%' }}
           >
             <Text fontSize={{ base: 'xl', md: '3xl' }}>
               Hi I am {ImgData?.fullName}
