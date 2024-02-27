@@ -48,7 +48,8 @@ const ProfileHeader = () => {
             flexDir={'column'}
             justifyContent={'center'}
             mx={'auto'}
-            gap={{ base: '2%', md: '3%' }}
+            gap={{ base: '3%', md: '2%' }}
+            w={'45%'}
           >
             <Text fontSize={{ base: 'xl', md: '3xl' }}>
               Hi I am {ImgData?.fullName}

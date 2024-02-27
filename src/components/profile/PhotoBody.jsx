@@ -1,5 +1,4 @@
 import {
-  GridItem,
   Image,
   Flex,
   Modal,
@@ -9,6 +8,9 @@ import {
   ModalOverlay,
   useDisclosure,
 } from '@chakra-ui/react';
+
+import '@fontsource/raleway/400.css';
+import '@fontsource/open-sans/700.css';
 
 // import Lightbox from 'yet-another-react-lightbox';
 // import 'yet-another-react-lightbox/styles.css';

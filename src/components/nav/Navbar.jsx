@@ -2,6 +2,9 @@ import { Flex, Box, Text, Button, Divider } from '@chakra-ui/react';
 
 import { FaBurger } from 'react-icons/fa6';
 
+import '@fontsource/raleway/400.css';
+import '@fontsource/open-sans/700.css';
+
 const Navbar = () => {
   return (
     <>

@@ -7,10 +7,13 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
+import { BrowserRouter } from 'react-router-dom';
+
 const styles = {
   global: (props) => ({
     body: {
       bg: mode('whiteAlpha.900')(props),
+      color: mode('gray.800', 'whiteAlpha.900')(props),
     },
   }),
 };
@@ -20,12 +23,21 @@ const config = {
   useSystemColorMode: false,
 };
 
-const theme = extendTheme({ config, styles });
+const theme = extendTheme({
+  config,
+  styles,
+  fonts: {
+    heading: `'Open Sans', sans-serif`,
+    body: `'Raleway', sans-serif`,
+  },
+});
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <App />
-    </ChakraProvider>
+    <BrowserRouter>
+      <ChakraProvider theme={theme}>
+        <App />
+      </ChakraProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
