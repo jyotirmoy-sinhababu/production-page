@@ -27,9 +27,9 @@ const ProfileHeader = () => {
         ))}
       {!isLoading && (
         <Flex
-          pt={{ base: '41px', md: '96px' }}
+          pt={{ base: '7px', md: '36px' }}
           flexDir={{ base: 'column', md: 'row' }}
-          gap={{ base: '4%', md: '7%' }}
+          gap={{ base: '6%', md: '7%' }}
         >
           <AvatarGroup
             size={{ base: 'xl', md: 'xl' }}
@@ -43,8 +43,7 @@ const ProfileHeader = () => {
               src={ImgData?.profilePicURL}
             />
           </AvatarGroup>
-          <Box
-            display={'flex'}
+          <Flex
             flexDir={'column'}
             justifyContent={'center'}
             mx={'auto'}
@@ -56,7 +55,7 @@ const ProfileHeader = () => {
             </Text>
             <Text fontSize={{ base: '2xl', md: '6xl' }}>{ImgData?.bio}</Text>
             <FloatingIsland />
-          </Box>
+          </Flex>
         </Flex>
       )}
     </>

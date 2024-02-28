@@ -1,7 +1,7 @@
-import { Tooltip, Box, Link, Text } from '@chakra-ui/react';
+import { Link, Tooltip, Box } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
-import { FcAbout } from 'react-icons/fc';
+import { IoMdContact } from 'react-icons/io';
 
 const AboutLink = () => {
   return (
@@ -12,7 +12,7 @@ const AboutLink = () => {
         placement='right'
         ml={1}
         openDelay={500}
-        display={{ base: 'block', md: 'none' }}
+        display={'block'}
       >
         <Link
           display={'flex'}
@@ -22,10 +22,7 @@ const AboutLink = () => {
           gap={4}
           _hover={{ bg: 'whiteAlpha.400' }}
         >
-          <FcAbout size={25} />
-          <Box display={{ base: 'none', md: 'block' }}>
-            <Text color={'whiteAlpha.900'}>About me</Text>
-          </Box>
+          <IoMdContact size={25} />
         </Link>
       </Tooltip>
     </>

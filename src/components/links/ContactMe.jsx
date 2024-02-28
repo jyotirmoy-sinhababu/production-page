@@ -1,32 +1,32 @@
-import { Tooltip, Box, Link, Text } from '@chakra-ui/react';
+import { Link, Tooltip, Box } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
-import { IoMdContact } from 'react-icons/io';
+import { IoCall } from 'react-icons/io5';
 
 const ContactMe = () => {
   return (
-    <Tooltip
-      hasArrow
-      label={'Contact me'}
-      placement='right'
-      ml={1}
-      openDelay={500}
-      display={{ base: 'block', md: 'none' }}
-    >
-      <Link
-        display={'flex'}
-        to={'/'}
-        as={RouterLink}
-        alignItems={'center'}
-        gap={4}
-        _hover={{ bg: 'whiteAlpha.400' }}
+    <>
+      {' '}
+      <Tooltip
+        hasArrow
+        label={'Contact me'}
+        placement='right'
+        ml={1}
+        openDelay={500}
+        display={'block'}
       >
-        <IoMdContact size={25} />
-        <Box display={{ base: 'none', md: 'block' }}>
-          <Text color={'whiteAlpha.900'}>Contact me</Text>
-        </Box>
-      </Link>
-    </Tooltip>
+        <Link
+          display={'flex'}
+          to={'/'}
+          as={RouterLink}
+          alignItems={'center'}
+          gap={4}
+          _hover={{ bg: 'whiteAlpha.400' }}
+        >
+          <IoCall size={25} />
+        </Link>
+      </Tooltip>
+    </>
   );
 };
 
