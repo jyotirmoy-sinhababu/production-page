@@ -30,6 +30,8 @@ const ProfileHeader = () => {
           pt={{ base: '7px', md: '36px' }}
           flexDir={{ base: 'column', md: 'row' }}
           gap={{ base: '6%', md: '7%' }}
+          justifyContent={'center'}
+          alignItems={'center'}
         >
           <AvatarGroup
             size={{ base: 'xl', md: 'xl' }}
@@ -45,16 +47,20 @@ const ProfileHeader = () => {
           </AvatarGroup>
           <Flex
             flexDir={'column'}
-            justifyContent={'center'}
             mx={'auto'}
-            gap={{ base: '3%', md: '2%' }}
-            w={'45%'}
+            gap={{ base: '13%', md: '2%' }}
+            w={{ base: '60%', md: '45%' }}
+            justifyContent={'space-around'}
           >
-            <Text fontSize={{ base: 'xl', md: '3xl' }}>
-              Hi I am {ImgData?.fullName}
-            </Text>
-            <Text fontSize={{ base: '2xl', md: '6xl' }}>{ImgData?.bio}</Text>
-            <FloatingIsland />
+            <Flex flexDir={'column'}>
+              <Text fontSize={{ base: '2xl', md: '3xl' }}>
+                Hi I am {ImgData?.fullName}
+              </Text>
+              <Text fontSize={{ base: '2xl', md: '6xl' }}>{ImgData?.bio}</Text>
+            </Flex>
+            <Box pt={'4%'}>
+              <FloatingIsland />
+            </Box>
           </Flex>
         </Flex>
       )}

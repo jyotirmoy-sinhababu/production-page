@@ -18,10 +18,28 @@ const Navbar = () => {
         <Flex pl={'12px'}>
           <Text fontSize={{ md: '4xl', sm: '2xl' }}>Rick's Photography</Text>
         </Flex>
-        <Flex alignItems={'center'} w={'208px'} justifyContent={'space-around'}>
+        <Flex
+          w={'80px'}
+          justifyContent={'space-between'}
+          display={{ base: 'none', md: 'flex' }}
+        >
           <AboutLink />
           <ContactMe />
         </Flex>
+      </Flex>
+
+      <Divider my={2} bg={'gray.10000'} />
+      <Flex
+        alignItems={'center'}
+        w={'100vw'}
+        pr={'4%'}
+        justifyContent={'flex-end'}
+        display={{ base: 'flex', md: 'none' }}
+        gap={'4%'}
+        h={'90px'}
+      >
+        <AboutLink />
+        <ContactMe />
       </Flex>
       <Divider my={2} bg={'gray.10000'} />
     </>
