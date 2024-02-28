@@ -12,7 +12,7 @@ const Navbar = () => {
       <Flex
         alignItems={'center'}
         justifyContent={'space-between'}
-        h={{ base: '100px', md: '90px' }}
+        h={{ base: '80px', md: '100px' }}
         mx={'2%'}
       >
         <Flex pl={'12px'}>
@@ -36,7 +36,7 @@ const Navbar = () => {
         justifyContent={'flex-end'}
         display={{ base: 'flex', md: 'none' }}
         gap={'4%'}
-        h={'90px'}
+        h={'38px'}
       >
         <AboutLink />
         <ContactMe />

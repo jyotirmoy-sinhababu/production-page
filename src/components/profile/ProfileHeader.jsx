@@ -34,7 +34,6 @@ const ProfileHeader = () => {
           alignItems={'center'}
         >
           <AvatarGroup
-            size={{ base: 'xl', md: 'xl' }}
             justifySelf={'center'}
             alignSelf={'flex-start'}
             mx={'auto'}
@@ -46,17 +45,17 @@ const ProfileHeader = () => {
             />
           </AvatarGroup>
           <Flex
-            flexDir={'column'}
+            flexDir={{ base: 'column-reverse', md: 'column' }}
             mx={'auto'}
             gap={{ base: '13%', md: '2%' }}
-            w={{ base: '60%', md: '45%' }}
-            justifyContent={'space-around'}
+            w={{ base: '100vw', md: '45%' }}
+            pl={{ base: '23%', md: '0' }}
           >
-            <Flex flexDir={'column'}>
+            <Flex flexDir={'column'} pt={'2%'}>
               <Text fontSize={{ base: '2xl', md: '3xl' }}>
                 Hi I am {ImgData?.fullName}
               </Text>
-              <Text fontSize={{ base: '2xl', md: '6xl' }}>{ImgData?.bio}</Text>
+              <Text fontSize={{ base: '3xl', md: '6xl' }}>{ImgData?.bio}</Text>
             </Flex>
             <Box pt={'4%'}>
               <FloatingIsland />
