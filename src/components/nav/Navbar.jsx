@@ -45,11 +45,7 @@ const Navbar = () => {
         </Flex>
       </Flex>
       <Divider my={2} bg={'gray.10000'} />
-      <Slide
-        direction='right'
-        in={isOpen}
-        style={{ zIndex: 10, width: '25vw' }}
-      >
+      <Slide direction='right' in={isOpen} style={{ zIndex: 10 }}>
         <Flex
           p='40px'
           color='white'
@@ -59,6 +55,7 @@ const Navbar = () => {
           shadow='md'
           pt={'30%'}
           h={'50vh'}
+          w={{ md: '25vw', base: '45vw' }}
           flexDir={'column'}
           gap={'15%'}
         >
