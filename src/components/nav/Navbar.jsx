@@ -16,6 +16,8 @@ import { Slide } from '@chakra-ui/react';
 import AboutLink from '../links/AboutLink';
 import ContactMe from '../links/ContactMe';
 
+import { RxCross1 } from 'react-icons/rx';
+
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
   return (
@@ -35,8 +37,10 @@ const Navbar = () => {
             background={'transparent'}
             fontSize={{ md: '8xl', base: '2xl' }}
             zIndex={'12'}
+            color={!isOpen ? 'black' : 'white'}
+            _hover={{ color: 'red.600', backgroundColor: 'white' }}
           >
-            <GiHamburgerMenu />
+            {!isOpen ? <GiHamburgerMenu /> : <RxCross1 />}
           </Button>
         </Flex>
       </Flex>
@@ -46,19 +50,21 @@ const Navbar = () => {
         in={isOpen}
         style={{ zIndex: 10, width: '25vw' }}
       >
-        <Box
+        <Flex
           p='40px'
           color='white'
           mt='1'
           bg='gray.700'
-          opacity={0.5}
           rounded='md'
           shadow='md'
-          h={'100vh'}
+          pt={'30%'}
+          h={'50vh'}
+          flexDir={'column'}
+          gap={'15%'}
         >
           <AboutLink />
           <ContactMe />
-        </Box>
+        </Flex>
       </Slide>
     </>
   );

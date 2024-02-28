@@ -1,4 +1,4 @@
-import { Tooltip, Box, Link } from '@chakra-ui/react';
+import { Tooltip, Box, Link, Text } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
 import { FcAbout } from 'react-icons/fc';
@@ -23,7 +23,9 @@ const AboutLink = () => {
           _hover={{ bg: 'whiteAlpha.400' }}
         >
           <FcAbout size={25} />
-          <Box display={{ base: 'none', md: 'block' }}>About me</Box>
+          <Box display={{ base: 'none', md: 'block' }}>
+            <Text color={'whiteAlpha.900'}>About me</Text>
+          </Box>
         </Link>
       </Tooltip>
     </>
