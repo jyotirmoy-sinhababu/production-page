@@ -1,4 +1,4 @@
-import { Link, Tooltip, Box } from '@chakra-ui/react';
+import { Link, Tooltip } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
 import { IoCall } from 'react-icons/io5';
