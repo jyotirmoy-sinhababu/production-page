@@ -13,9 +13,10 @@ const PhotoGallery = () => {
   return (
     <Grid
       templateColumns={{
-        sm: 'repeat(1, 1fr)',
-        md: 'repeat(3, 1fr)',
+        sm: 'repeat(2, 30px, 30px)',
+        md: 'repeat(4, 1fr)',
       }}
+      templateRows='repeat(2, 1fr)'
       gap={1}
       columnGap={1}
     >
@@ -31,9 +32,9 @@ const PhotoGallery = () => {
       {!isLoading && allData.length > 0 ? (
         <>
           {allData?.map((data, index) => (
-            <Flex key={index} flexWrap={'wrap'} m={'4px'}>
+            <div key={index} m={'3px'}>
               <PhotoBody data={data} />
-            </Flex>
+            </div>
           ))}
         </>
       ) : null}

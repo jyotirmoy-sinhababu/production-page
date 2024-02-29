@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
-import { collection, getDocs, query, where } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 import { firestore } from '../firebase/Firebase';
 import useShowToast from './useShowToast';
 

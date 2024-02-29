@@ -1,5 +1,6 @@
 import {
   Image,
+  GridItem,
   Flex,
   Modal,
   ModalBody,
@@ -15,10 +16,29 @@ import '@fontsource/open-sans/700.css';
 const PhotoBody = ({ data }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <>
-      {' '}
-      <Flex
+      <GridItem
         cursor={'pointer'}
         borderRadius={4}
         overflow={'hidden'}
@@ -50,9 +70,9 @@ const PhotoBody = ({ data }) => {
           w={'100%'}
           h={'100%'}
           rounded={'15px'}
-          fit={'cover'}
+          fit={'fill'}
         />
-      </Flex>
+      </GridItem>
       <Modal
         isOpen={isOpen}
         onClose={onClose}
