@@ -47,13 +47,17 @@ const ProfileHeader = () => {
           </AvatarGroup>
           <Flex
             flexDir={{ base: 'column-reverse', md: 'column' }}
-            mx={'auto'}
             gap={{ base: '13%', md: '2%' }}
             w={{ base: '100vw', md: '45%' }}
-            pl={{ base: '23%', md: '0' }}
-            justifyContent={'center'}
+            justifyContent={{ base: 'center', md: 'flex-start' }}
+            alignItems={{ base: 'center', md: 'flex-start' }}
           >
-            <Flex flexDir={'column'} pt={'2%'} justifyContent={'center'}>
+            <Flex
+              flexDir={'column'}
+              pt={'2%'}
+              justifyContent={{ base: 'center', md: 'flex-start' }}
+              alignItems={{ base: 'center', md: 'flex-start' }}
+            >
               <Heading fontSize={{ base: '2xl', md: '3xl' }}>
                 Hi I am {ImgData?.fullName}
               </Heading>

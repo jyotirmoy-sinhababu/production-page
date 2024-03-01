@@ -1,10 +1,12 @@
-import { Flex, Text, Divider } from '@chakra-ui/react';
+import { Flex, Text, Divider, Box } from '@chakra-ui/react';
 
 import '@fontsource/raleway/400.css';
 import '@fontsource/open-sans/700.css';
 
 import AboutLink from '../links/AboutLink';
 import ContactMe from '../links/ContactMe';
+
+import Logo from '../logo/Logo';
 
 const Navbar = () => {
   return (
@@ -15,8 +17,21 @@ const Navbar = () => {
         h={{ base: '80px', md: '100px' }}
         mx={'2%'}
       >
-        <Flex pl={'12px'}>
-          <Text fontSize={{ md: '4xl', sm: '2xl' }}>Rick's Photography</Text>
+        <Flex pl={'12px'} flexDir={'column'}>
+          <Text
+            fontSize={{ md: '2xl', sm: 'xl' }}
+            fontWeight={'400'}
+            mb={'-8%'}
+          >
+            Rick's
+          </Text>
+          <Box
+            backgroundClip={'text'}
+            bgGradient='linear(to-l, blue.400, red.800)'
+            fontWeight={'800'}
+          >
+            <Text fontSize={{ md: '4xl', sm: '2xl' }}> Photography</Text>
+          </Box>
         </Flex>
         <Flex
           w={'80px'}
