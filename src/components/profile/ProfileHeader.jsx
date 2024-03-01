@@ -6,6 +6,7 @@ import {
   VStack,
   AvatarGroup,
   Avatar,
+  Heading,
 } from '@chakra-ui/react';
 
 import useFetchProfilePic from '../../hooks/useFetchProfilePic';
@@ -50,11 +51,12 @@ const ProfileHeader = () => {
             gap={{ base: '13%', md: '2%' }}
             w={{ base: '100vw', md: '45%' }}
             pl={{ base: '23%', md: '0' }}
+            justifyContent={'center'}
           >
-            <Flex flexDir={'column'} pt={'2%'}>
-              <Text fontSize={{ base: '2xl', md: '3xl' }}>
+            <Flex flexDir={'column'} pt={'2%'} justifyContent={'center'}>
+              <Heading fontSize={{ base: '2xl', md: '3xl' }}>
                 Hi I am {ImgData?.fullName}
-              </Text>
+              </Heading>
               <Text fontSize={{ base: '3xl', md: '6xl' }}>{ImgData?.bio}</Text>
             </Flex>
             <Box pt={'4%'}>

@@ -16,7 +16,7 @@ const AboutLink = () => {
       >
         <Link
           display={'flex'}
-          to={'/'}
+          to={'/abt'}
           as={RouterLink}
           alignItems={'center'}
           gap={4}

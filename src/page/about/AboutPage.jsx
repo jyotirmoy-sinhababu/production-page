@@ -1,4 +1,11 @@
-import { Avatar, VStack, AvatarGroup, Skeleton, Box } from '@chakra-ui/react';
+import {
+  Avatar,
+  VStack,
+  AvatarGroup,
+  Skeleton,
+  Box,
+  Flex,
+} from '@chakra-ui/react';
 
 import useFetchProfilePic from '../../hooks/useFetchProfilePic';
 
@@ -28,6 +35,7 @@ const AboutPage = () => {
           />
         </AvatarGroup>
       )}
+      <Flex></Flex>
     </>
   );
 };
