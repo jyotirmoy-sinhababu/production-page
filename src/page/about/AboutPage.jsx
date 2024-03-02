@@ -39,10 +39,8 @@ const AboutPage = () => {
               />
             </AvatarGroup>
             <Box display={'flex'}>
-              <Text fontSize={'2xl'}>
-                Welcome to a visual odyssey where style, elegance, and
-                creativity converge to form a symphony of captivating imagery. I
-                am Rick, a fashion photographer, and within the frames of this
+              <Text fontSize={'2xl'} fontWeight={'500'}>
+                I am Rick, a fashion photographer, and within the frames of this
                 portfolio, I invite you to experience a world where every image
                 is a celebration of aesthetics, personality, and the
                 ever-evolving language of style.

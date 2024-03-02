@@ -48,7 +48,6 @@ const ProfileHeader = () => {
           <Flex
             flexDir={{ base: 'column-reverse', md: 'column' }}
             gap={{ base: '13%', md: '2%' }}
-            w={{ base: '100vw', md: '45%' }}
             justifyContent={{ base: 'center', md: 'flex-start' }}
             alignItems={{ base: 'center', md: 'flex-start' }}
           >
@@ -61,7 +60,12 @@ const ProfileHeader = () => {
               <Heading fontSize={{ base: '2xl', md: '3xl' }}>
                 Hi I am {ImgData?.fullName}
               </Heading>
-              <Text fontSize={{ base: '3xl', md: '6xl' }}>{ImgData?.bio}</Text>
+              <Text
+                textAlign={{ base: 'center', md: 'inherit' }}
+                fontSize={{ base: '3xl', md: '6xl' }}
+              >
+                {ImgData?.bio}
+              </Text>
             </Flex>
             <Box pt={'4%'}>
               <FloatingIsland />

@@ -6,8 +6,6 @@ import '@fontsource/open-sans/700.css';
 import AboutLink from '../links/AboutLink';
 import ContactMe from '../links/ContactMe';
 
-import Logo from '../logo/Logo';
-
 const Navbar = () => {
   return (
     <>
