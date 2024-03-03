@@ -6,7 +6,10 @@ import '@fontsource/open-sans/700.css';
 import AboutLink from '../links/AboutLink';
 import ContactMe from '../links/ContactMe';
 
+import { useNavigate } from 'react-router-dom';
+
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Flex
@@ -15,7 +18,13 @@ const Navbar = () => {
         h={{ base: '80px', md: '100px' }}
         mx={'2%'}
       >
-        <Flex pl={'12px'} flexDir={'column'}>
+        <Flex
+          pl={'12px'}
+          flexDir={'column'}
+          onClick={() => {
+            navigate('/');
+          }}
+        >
           <Text
             fontSize={{ md: '2xl', sm: 'xl' }}
             fontWeight={'400'}

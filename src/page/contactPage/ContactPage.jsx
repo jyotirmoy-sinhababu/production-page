@@ -9,7 +9,7 @@ const ContactPage = () => {
   const copyFunction = async (data) => {
     try {
       await navigator.clipboard.writeText(data);
-      alert('copied');
+      alert(' copied');
     } catch (error) {
       console.log(error);
     }
@@ -20,9 +20,10 @@ const ContactPage = () => {
       <Flex
         flexDir={'column'}
         alignItems={'center'}
-        justifyContent={{ base: 'space-between', md: 'center' }}
-        mt={{ base: '12%', md: '7%' }}
-        gap={{ base: '27px', md: '8px' }}
+        justifyContent={'center'}
+        mt={{ base: '2%', md: '7%' }}
+        gap={{ base: '17px', md: '8px' }}
+        h={{ base: '50vh' }}
       >
         <Heading fontSize={{ base: '4xl', md: '7xl' }}>
           Let's work together.
@@ -73,7 +74,7 @@ const ContactPage = () => {
             }}
             background={'transparent'}
             fontSize={'44px'}
-            _hover={{ color: 'gray.500' }}
+            _hover={{ color: 'orange' }}
           >
             <FaMobileAlt />
           </Button>

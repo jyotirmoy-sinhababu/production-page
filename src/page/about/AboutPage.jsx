@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 
 import useFetchProfilePic from '../../hooks/useFetchProfilePic';
+import Footer from '../../components/Footer/Footer';
 
 const AboutPage = () => {
   const { ImgData } = useFetchProfilePic();
@@ -33,13 +34,17 @@ const AboutPage = () => {
               mx={'auto'}
             >
               <Avatar
-                w={{ base: '210px', md: '400px' }}
-                h={{ base: '210px', md: '400px' }}
+                w={{ base: '210px', md: '250px' }}
+                h={{ base: '210px', md: '250px' }}
                 src={ImgData?.profilePicURL}
               />
             </AvatarGroup>
             <Box display={'flex'}>
-              <Text fontSize={'2xl'} fontWeight={'500'}>
+              <Text
+                fontSize={{ base: '2xl', md: '3xl' }}
+                fontWeight={'700'}
+                textAlign={'center'}
+              >
                 I am Rick, a fashion photographer, and within the frames of this
                 portfolio, I invite you to experience a world where every image
                 is a celebration of aesthetics, personality, and the
@@ -49,6 +54,7 @@ const AboutPage = () => {
           </Flex>
         </Flex>
       )}
+      <Footer />
     </>
   );
 };
