@@ -17,7 +17,7 @@ const ContactMe = () => {
       >
         <Link
           display={'flex'}
-          to={'/'}
+          to={'/contact'}
           as={RouterLink}
           alignItems={'center'}
           gap={4}

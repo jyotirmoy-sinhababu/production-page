@@ -30,9 +30,9 @@ const ProfileHeader = () => {
         <Flex
           pt={{ base: '7px', md: '36px' }}
           flexDir={{ base: 'column', md: 'row' }}
-          gap={{ base: '6%', md: '7%' }}
-          justifyContent={'center'}
-          alignItems={'center'}
+          gap={{ base: '6%', md: '28%' }}
+          ml={{ base: '0px', sm: '55px' }}
+          justifyContent={{ base: 'center', md: 'space-between' }}
         >
           <AvatarGroup
             justifySelf={'center'}
@@ -47,7 +47,7 @@ const ProfileHeader = () => {
           </AvatarGroup>
           <Flex
             flexDir={{ base: 'column-reverse', md: 'column' }}
-            gap={{ base: '13%', md: '2%' }}
+            gap={{ base: '11%', md: '2%' }}
             justifyContent={{ base: 'center', md: 'flex-start' }}
             alignItems={{ base: 'center', md: 'flex-start' }}
           >
@@ -62,7 +62,8 @@ const ProfileHeader = () => {
               </Heading>
               <Text
                 textAlign={{ base: 'center', md: 'inherit' }}
-                fontSize={{ base: '3xl', md: '6xl' }}
+                fontSize={{ base: '3xl', md: '5xl' }}
+                w={{ base: 'auto', md: '70%' }}
               >
                 {ImgData?.bio}
               </Text>
