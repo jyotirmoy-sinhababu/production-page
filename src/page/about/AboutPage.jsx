@@ -45,10 +45,10 @@ const AboutPage = () => {
                 fontWeight={'700'}
                 textAlign={'center'}
               >
-                I am Rick, a fashion photographer, and within the frames of this
-                portfolio, I invite you to experience a world where every image
-                is a celebration of aesthetics, personality, and the
-                ever-evolving language of style.
+                I am Rick. A freelance fashion photographer based in kolkata. I
+                combine my experience to create a world , where every image is a
+                celebration of aesthetics, personality, and the ever-evolving
+                language of style.
               </Text>
             </Box>
           </Flex>
