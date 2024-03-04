@@ -4,6 +4,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { FaFacebookSquare, FaMobileAlt } from 'react-icons/fa';
 import { SiInstagram } from 'react-icons/si';
 import { MdMail } from 'react-icons/md';
+import Footer from '../../components/Footer/Footer';
 
 const ContactPage = () => {
   const copyFunction = async (data) => {
@@ -80,6 +81,7 @@ const ContactPage = () => {
           </Button>
         </Flex>
       </Flex>
+      <Footer />
     </>
   );
 };

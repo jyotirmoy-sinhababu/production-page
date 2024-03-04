@@ -26,7 +26,7 @@ const ProfileHeader = () => {
             </Skeleton>
           </VStack>
         ))}
-      {!isLoading && (
+      {!isLoading ? (
         <Flex
           pt={{ base: '7px', md: '36px' }}
           flexDir={{ base: 'column', md: 'row' }}
@@ -73,6 +73,10 @@ const ProfileHeader = () => {
             </Box>
           </Flex>
         </Flex>
+      ) : (
+        <Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
+          <Text>Something Went Wrong.</Text>
+        </Box>
       )}
     </>
   );
